@@ -1,0 +1,77 @@
+/* Reset default spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Theme variables */
+:root{
+    --accent:#0066cc;
+    --accent-2:#004a99;
+    --bg:#f7f9fc;
+    --text:#222;
+    --muted:#6b7280;
+    --card:#ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.container{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header styling */
+header {
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    color: #fff;
+    padding: 16px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+header h1{font-size:1.4rem;margin:0}
+nav ul.nav{list-style:none;display:flex;gap:14px}
+nav a{color:rgba(255,255,255,0.95);text-decoration:none;padding:8px 12px;border-radius:6px;font-weight:600}
+nav a:hover{background:rgba(255,255,255,0.08)}
+
+/* Hero */
+.hero{
+    padding: 60px 0;
+    background: linear-gradient(180deg, rgba(0,102,204,0.08), transparent);
+    text-align: center;
+}
+.hero h2{font-size:2rem;margin-bottom:8px}
+.lead{font-size:1.1rem;color:var(--muted);margin-bottom:18px}
+
+/* Buttons */
+.btn{display:inline-block;padding:10px 18px;background:var(--card);color:var(--accent-2);border-radius:8px;text-decoration:none;border:1px solid rgba(0,0,0,0.06);cursor:pointer}
+.btn-primary{background:var(--accent);color:#fff;border:none;box-shadow:0 6px 18px rgba(0,102,204,0.12)}
+.btn:hover{opacity:0.95;transform:translateY(-1px)}
+
+/* Content + cards */
+.content{padding:40px 0}
+.content h3{margin-bottom:12px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+.card{background:var(--card);padding:18px;border-radius:10px;box-shadow:0 6px 20px rgba(0,0,0,0.06);text-align:left}
+.card h4{margin-bottom:8px}
+.card p{color:var(--muted);margin-bottom:12px}
+
+/* Footer styling */
+footer{padding:20px 0;margin-top:40px;background:transparent;color:var(--muted)}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+.social a{color:var(--muted);text-decoration:none;margin-left:8px}
+.social a:hover{color:var(--accent)}
+
+@media (max-width:800px){
+    .header-inner{flex-direction:column;gap:12px}
+    .cards{grid-template-columns:1fr}
+    .hero{padding:40px 0}
+}
